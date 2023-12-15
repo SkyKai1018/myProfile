@@ -3,7 +3,7 @@ const job = [
         job_title: "產品工程師",
         company_name: "新代科技",
         during_time: "2020.9 ~ 2023.7",
-        image: "/synteclogo.jpeg",
+        image: "./synteclogo.jpeg",
         job_description: [
             '新產品新市場需求瞭解及規格訂定',
             '新產品開發、 維護、推展計劃擬定',
@@ -15,7 +15,7 @@ const job = [
         job_title: '機構工程師',
         company_name: '華創車電',
         during_time: '2018.5 ~ 2018.8',
-        image: "/haitec_logo.jpeg",
+        image: "./haitec_logo.jpeg",
         job_description: [
             '旋轉壓縮於金屬粉末成形之有限元素分析',
             '組裝現場問題解決。 Ex : 機油泵裝上殼體後無法轉動',
@@ -26,7 +26,7 @@ const job = [
     {
         job_title: '實習生',
         company_name: '鑫威資訊',
-        image: "/simware_log.webp",
+        image: "./simware_log.webp",
         during_time: '2016.7 ~ 2016.8',
         job_description: [
             '協助Dynaform 前處理流程設置及運算',

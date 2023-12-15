@@ -1,7 +1,7 @@
 const projects = [
     {
         title: "YelpCamp",
-        image: "/yelpcamp.png",
+        image: "./yelpcamp.png",
         links: {
             demo: "https://skykaiyelpcamp.onrender.com/",
             github: "https://github.com/SkyKai1018",
