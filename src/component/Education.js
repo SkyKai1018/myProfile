@@ -3,7 +3,7 @@ const educations = [
         school: "中山大學",
         department: "機械與機電工程 金屬成形實驗室",
         degree: "碩士",
-        year: "2013/1 - 2020/8",
+        year: "2019/1 - 2020/8",
         descriptions: [
             "設計旋轉壓縮成形機，並與廠商溝通確保交期確定",
             "使用Deform 3D對旋轉壓縮成形進行有限元素分析",

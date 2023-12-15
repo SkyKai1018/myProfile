@@ -4,7 +4,7 @@ const projects = [
         image: "./yelpcamp.png",
         links: {
             demo: "https://skykaiyelpcamp.onrender.com/",
-            github: "https://github.com/SkyKai1018",
+            github: "https://github.com/SkyKai1018/yelpcamp",
         },
         skills: [
             "JavaScript",
