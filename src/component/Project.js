@@ -56,7 +56,7 @@ function Project() {
                     <div className="row">
                         {projects.map((project, index) => (
                             <div className="col-md-6 mb-3" key={index}>
-                                <div className="card shadow">
+                                <div className="card project-card shadow">
                                     <img src={project.image} className="card-img-top" alt="..." />
                                     <div className="card-body">
                                         <h5 className="card-title mb-3">{project.title}</h5>
