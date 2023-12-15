@@ -1,0 +1,47 @@
+
+#root{
+  background-color:#F4F2ED;
+}
+
+.App-header{
+  background-color: #FFFFFF;
+}
+
+.Introduction-col,
+.Project-col,
+.Other-col,
+.Skills-col,
+.WorkExperience-col,
+.Education-col{
+  background-color: #FFFFFF;
+  border-radius: 15px;
+}
+
+#introuduction-pic {
+  width: 250px;
+  height: 250px;
+}
+
+.custom-image-size {
+  width: 60px;
+  height: auto;
+}
+.card,
+.education-listcard,
+.workexperience-listcard{
+    background-color: #f8f9fa;
+}
+
+.card-text{
+  white-space: pre-wrap;
+}
+
+.custom-icon{
+  width: 40px;
+  height: auto;
+}
+
+.skills-col{
+  width: 30%;
+}
+
