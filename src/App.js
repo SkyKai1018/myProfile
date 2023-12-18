@@ -42,7 +42,7 @@ function App() {
         <Route path="/myprofile/1" element={<Article1 />} />
         <Route path="/myprofile/blog" element={<Blog />} />
         <Route path="/myprofile/blog/:id" element={<Blog />} />
-        <Route path="*" element={<NoPage />} />
+        <Route path="/myprofile/*" element={<NoPage />} />
       </Routes>
     </Router>
   );
