@@ -13,7 +13,7 @@ try {
 function Blog() {
     const id = useParams().id; // 取得動態參數的值
     let componentToRender = null;
-    if (id >= 1 && id <= 10) {
+    if (id >= 1 && id <= Htmls.length) {
         const ComponentToRender = Htmls[id - 1];
         componentToRender = <ComponentToRender />;
     } else {
