@@ -33,9 +33,9 @@ function App() {
     <Router>
       <Header/>
       <Routes>
-        <Route path="/myProfile" element={<Profile />} />
-        <Route path="/myProfile/blog" element={<Blog />} />
-        <Route path="/myProfile/blog/:id" element={<Blog />} />
+        <Route path="/myprofile" element={<Profile />} />
+        <Route path="/myprofile/blog" element={<Blog />} />
+        <Route path="/myprofile/blog/:id" element={<Blog />} />
         <Route path="*" element={<NoPage />} />
       </Routes>
     </Router>
