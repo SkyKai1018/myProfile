@@ -1,0 +1,47 @@
+name: Convert Markdown to React Component
+
+on:
+  push:
+    paths:
+      - "public/posts/*.md"
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: Install dependencies
+        run: |
+          npm install remark remark-react
+
+      - name: Convert Markdown files to React Components
+        run: |
+          mkdir -p src/components/posts
+          for file in public/posts/*.md; do
+            filename=$(basename "$file" .md)
+            echo "const React = require('react');" > "src/components/posts/${filename}.js"
+            echo "const unified = require('unified');" >> "src/components/posts/${filename}.js"
+            echo "const markdown = require('remark-parse');" >> "src/components/posts/${filename}.js"
+            echo "const remark2react = require('remark-react');" >> "src/components/posts/${filename}.js"
+            echo "const content = unified()" >> "src/components/posts/${filename}.js"
+            echo "  .use(markdown)" >> "src/components/posts/${filename}.js"
+            echo "  .use(remark2react)" >> "src/components/posts/${filename}.js"
+            echo "  .processSync(require('fs').readFileSync('$file')).contents;" >> "src/components/posts/${filename}.js"
+            echo "const ${filename} = () => <>{content}</>;" >> "src/components/posts/${filename}.js"
+            echo "export default ${filename};" >> "src/components/posts/${filename}.js"
+          done
+
+      - name: Commit and push if changed
+        run: |
+          git config --global user.email "rgnkud@gmail.com"
+          git config --global user.name "SkyKai"
+          git add src/components/posts/*.js
+          git commit -m "Convert Markdown to React Components - ${{ github.actor }}" -a || exit 0
+          git push

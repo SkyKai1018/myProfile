@@ -56,7 +56,7 @@ function WorkExperience() {
                                             <div className='col-md-1'>
                                                 <img src={job.image} alt="SkyKai" className="card-img-top custom-image-size border border-2" />
                                             </div>
-                                            <div className='col-md-8 px-4'>
+                                            <div className='col-md-10 px-4'>
                                                 <h5 className="card-title ">{job.job_title}</h5>
                                                 <h6 className="card-subtitle mb-2 text-muted px-1">{job.company_name}</h6>
                                                 <h6 className="card-subtitle mb-2 text-muted px-1">{job.during_time}</h6>
