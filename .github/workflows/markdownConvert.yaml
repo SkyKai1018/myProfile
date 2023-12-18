@@ -23,25 +23,25 @@ jobs:
 
       - name: Convert Markdown files to React Components
         run: |
-          mkdir -p src/components/posts
+          mkdir -p src/component/posts
           for file in public/posts/*.md; do
             filename=$(basename "$file" .md)
-            echo "const React = require('react');" > "src/components/posts/${filename}.js"
-            echo "const unified = require('unified');" >> "src/components/posts/${filename}.js"
-            echo "const markdown = require('remark-parse');" >> "src/components/posts/${filename}.js"
-            echo "const remark2react = require('remark-react');" >> "src/components/posts/${filename}.js"
-            echo "const content = unified()" >> "src/components/posts/${filename}.js"
-            echo "  .use(markdown)" >> "src/components/posts/${filename}.js"
-            echo "  .use(remark2react)" >> "src/components/posts/${filename}.js"
-            echo "  .processSync(require('fs').readFileSync('$file')).contents;" >> "src/components/posts/${filename}.js"
-            echo "const ${filename} = () => <>{content}</>;" >> "src/components/posts/${filename}.js"
-            echo "export default ${filename};" >> "src/components/posts/${filename}.js"
+            echo "const React = require('react');" > "src/component/posts/${filename}.js"
+            echo "const unified = require('unified');" >> "src/component/posts/${filename}.js"
+            echo "const markdown = require('remark-parse');" >> "src/component/posts/${filename}.js"
+            echo "const remark2react = require('remark-react');" >> "src/component/posts/${filename}.js"
+            echo "const content = unified()" >> "src/component/posts/${filename}.js"
+            echo "  .use(markdown)" >> "src/component/posts/${filename}.js"
+            echo "  .use(remark2react)" >> "src/component/posts/${filename}.js"
+            echo "  .processSync(require('fs').readFileSync('$file')).contents;" >> "src/component/posts/${filename}.js"
+            echo "const ${filename} = () => <>{content}</>;" >> "src/component/posts/${filename}.js"
+            echo "export default ${filename};" >> "src/component/posts/${filename}.js"
           done
 
       - name: Commit and push if changed
         run: |
           git config --global user.email "rgnkud@gmail.com"
           git config --global user.name "SkyKai"
-          git add src/components/posts/*.js
+          git add src/component/posts/*.js
           git commit -m "Convert Markdown to React Components - ${{ github.actor }}" -a || exit 0
           git push
