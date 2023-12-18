@@ -24,14 +24,24 @@ function Profile() {
   );
 }
 
+function NoPage() {
+  return <h1>Page not found - 404!!!</h1>;
+}
+
+function Home() {
+  return <h1>Welcom Home!!!</h1>;
+}
+
 function App() {
   return (
     <Router>
-      <Header />
       <Routes>
-        <Route path="/myprofile" element={<Profile />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/blog/:id" element={<Blog />} />
+        <Route path="/" element={<Header />} />
+        <Route index element={<Home /> }  />
+          <Route path="myprofile" element={<Profile />} />
+          <Route path="blog" element={<Blog />} />
+          <Route path="blog/:id" element={<Blog />} />
+          <Route path="*" element={<NoPage />} />
       </Routes>
     </Router>
   );
