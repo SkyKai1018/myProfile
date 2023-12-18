@@ -8,6 +8,9 @@ import Other from './component/Other';
 import Project from './component/Project';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Blog from './Blog.js';
+import Article1 from './component/posts/1.js'
+
+
 
 function Profile() {
   return (
@@ -28,12 +31,15 @@ function NoPage() {
   return <h1>Page not found - 404!!!</h1>;
 }
 
+
+
 function App() {
   return (
     <Router>
       <Header/>
       <Routes>
         <Route path="/myprofile" element={<Profile />} />
+        <Route path="/myprofile/1" element={<Article1 />} />
         <Route path="/myprofile/blog" element={<Blog />} />
         <Route path="/myprofile/blog/:id" element={<Blog />} />
         <Route path="*" element={<NoPage />} />
