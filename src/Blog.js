@@ -21,9 +21,13 @@ function Blog() {
     }
 
     return (
-        <div>
-            {componentToRender}
-        </div>
+        <>
+            <div className="row">
+                <div className="Education-col col-md-10 offset-md-1 px-4 py-4">
+                    {componentToRender}
+                </div>
+            </div>
+        </>
     );
 }
 
