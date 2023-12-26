@@ -32,17 +32,45 @@ const projects = [
         ]
     },
     {
-        title: "更新中...",
+        title: "職缺地圖",
         image: "更新中...",
         links: {
-            demo: "#",
-            github: "#",
+            demo: "https://skykai1018.github.io/jobmap/",
+            github: "https://github.com/SkyKai1018/jobmap",
         },
         skills: [
-            "更新中..."
+            "JavaScript",
+            "3rd party API",
+            "Git",
+            "HTML",
+            "OpenrouteService",
+            "Python",
+            "爬蟲",
         ],
         functions: [
-            "更新中..."
+            "透過python爬蟲，收集104上關於後端工程師的職缺",
+            "職缺互動地圖 : 使用者可以在地圖上查看爬蟲搜集的後端工程師職缺",
+            "通勤範圍顯示 : 顯示定位置通勤10分鐘內的通勤範圍",
+            "職缺篩選 : 將通勤範圍外的職缺剔除"
+        ]
+    },{
+        title: "個人簡歷網頁",
+        image: "更新中...",
+        links: {
+            demo: "https://skykai1018.github.io/myProfile/",
+            github: "https://github.com/SkyKai1018/myProfile",
+        },
+        skills: [
+            "React.js",
+            "JavaScript",
+            "Github action",
+            "Git",
+            "CI/CD",
+        ],
+        functions: [
+            "提供個人簡歷瀏覽網頁",
+            "react.js 的基本操作練習",
+            "透過Github action 完成CI/CD 頁面部署練習",
         ]
     }
 ]
