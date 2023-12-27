@@ -30,6 +30,25 @@ const projects = [
             "用戶的新增編輯刪除都會更新到資料庫中",
             "每個露營地頁面都嵌入了Mapbox地圖"
         ]
+    },{
+        title: "立委地圖",
+        image: "更新中...",
+        links: {
+            demo: "https://skykai1018.github.io/LegislativeCandidates2024-TW/",
+            github: "https://github.com/SkyKai1018/LegislativeCandidates2024-TW",
+        },
+        skills: [
+            "JavaScript",
+            "爬蟲",
+            "資料分析",
+            "Git"
+        ],
+        functions: [
+            "互動地圖 : 使用者可以在地圖上查看台灣所有立法委員選區",
+            "候選人資料 : 提供每個選區候選人的基本信息，包括姓名、黨派等",
+            "提供立選選區的GeoJson(目前網路上無此資料)",
+            "提供立選候選人Json",
+        ]
     },
     {
         title: "職缺地圖",
